@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UyeMaster.master.cs" Inherits="DepocumWebApplication.UyePanel.UyeMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>DEPOCUM Paneli</title>
+    <link href="css/DepoMasterStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="ustMenu">
+            <div class="logoAlani">
+                <h2>Depocum Üye Paneli</h2>
+            </div>
+            <div class="kullaniciAlani">
+                <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click" Text="Güvenli Çıkış" CssClass="link"></asp:LinkButton>
+                <asp:Label ID="lbl_kullanici" runat="server" Text="kullanıcı"></asp:Label>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="solMenu">
+            <a href="AnaSayfa.aspx">Ana Sayfa</a>
+            <a href="DepoEkle.aspx">Depo Ekle</a>
+            <a href="DepoListele.aspx">Depo Listele</a>
+            <a href="RafEkle.aspx">Raf Ekle</a>
+            <a href="RafListele.aspx">Raf Listele</a>
+            <a href="PaletEkle.aspx">Palet Ekle</a>
+            <a href="PaletListele.aspx">Palet Listele</a>
+            <a href="UrunEkle.aspx">Ürün Ekle</a>
+            <a href="UrunGoster.aspx">Ürün Göster</a>
+        </div>
+        <div class="icerik">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

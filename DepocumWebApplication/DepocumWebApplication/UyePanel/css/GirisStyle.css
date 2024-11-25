@@ -1,0 +1,85 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+    background-color: #ffde54;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+}
+
+.deneme {
+    height: 30px;
+    background-color: darkorchid;
+}
+
+.karsilama {
+    width: 510px;
+    margin: 270px auto;
+    color: snow;
+}
+
+.maincerceve {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #000000;
+    border-radius: 3px;
+}
+
+    .maincerceve .panel {
+        width: 470px;
+        float: left;
+    }
+
+.hatakutu {
+    padding: 10px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    background-color: hotpink;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.satir {
+    margin-bottom: 20px;
+}
+
+    .satir .metinKutu {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #393C44;
+        border: none;
+        width: 90%;
+        border-radius: 2px;
+        color: #b79d9d;
+        font-size: 12pt;
+        border: 1px solid #393C44;
+    }
+
+        .satir .metinKutu:focus {
+            border: 1px solid #1999ff;
+            outline: none;
+        }
+
+.check label {
+    display: inline;
+    padding-left: 8px;
+}
+
+.girisButon {
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 3px;
+    background: rgb(196,196,196);
+    background: linear-gradient(90deg, rgba(196,196,196,1) 0%, rgba(170,170,170,1) 50%, rgba(145,145,145,1) 100%);
+}
+
+    .girisButon:hover {
+        background: rgb(170,170,170);
+        background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(145,145,145,1) 50%, rgba(119,119,119,1) 100%);
+    }

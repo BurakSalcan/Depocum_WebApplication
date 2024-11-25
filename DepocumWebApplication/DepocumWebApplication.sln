@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepocumWebApplication", "DepocumWebApplication\DepocumWebApplication.csproj", "{637CD086-34CD-4381-A2E3-DD2AE3BFF9F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{D5A7EB22-A154-470D-A561-C085C5FDD3CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{637CD086-34CD-4381-A2E3-DD2AE3BFF9F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637CD086-34CD-4381-A2E3-DD2AE3BFF9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637CD086-34CD-4381-A2E3-DD2AE3BFF9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637CD086-34CD-4381-A2E3-DD2AE3BFF9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A7EB22-A154-470D-A561-C085C5FDD3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A7EB22-A154-470D-A561-C085C5FDD3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A7EB22-A154-470D-A561-C085C5FDD3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A7EB22-A154-470D-A561-C085C5FDD3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12229267-BCA6-47C8-83CD-B700627F4CC1}
+	EndGlobalSection
+EndGlobal

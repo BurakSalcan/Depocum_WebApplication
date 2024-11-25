@@ -1,0 +1,65 @@
+CREATE DATABASE Depocum_DB
+GO
+USE Depocum_DB
+GO
+CREATE TABLE Uye
+(
+	ID int IDENTITY (1,1),
+	Isim NVARCHAR(100) NOT NULL,
+	Soyisim NVARCHAR(100) NOT NULL,
+	Mail NVARCHAR(100) NOT NULL,
+	Sifre NVARCHAR(30) NOT NULL,
+	AktifMi bit,
+	CONSTRAINT pk_Uye PRIMARY KEY(ID)
+)
+GO
+INSERT INTO Uye(Isim, Soyisim, Mail, Sifre, AktifMi)
+VALUES ('Ali','Yýlmaz', 'ali@ali.com', '1234', 1)
+INSERT INTO Uye(Isim, Soyisim, Mail, Sifre, AktifMi)
+VALUES ('Oya','Satýcýoðullarý', 'oya@oya.com', '123', 1)
+GO
+CREATE TABLE Depo
+(
+	ID int IDENTITY (1,1),
+	Isim NVARCHAR(100) NOT NULL,
+	Durum bit,
+	CONSTRAINT pk_Depo PRIMARY KEY(ID)
+)
+SELECT * FROM Depo
+GO
+CREATE TABLE Raf
+(
+	ID int IDENTITY (1,1),
+	Isim NVARCHAR(100) NOT NULL,
+	Depo_ID int,
+	Durum bit,
+	CONSTRAINT pk_Raf PRIMARY KEY(ID),
+	CONSTRAINT fk_rafDepoID FOREIGN KEY(Depo_ID) REFERENCES Depo(ID)
+)
+GO
+CREATE TABLE Palet
+(
+	ID int IDENTITY (1,1),
+	Isim NVARCHAR(100) NOT NULL,
+	Raf_ID int,
+	Durum bit,
+	CONSTRAINT pk_Palet PRIMARY KEY(ID),
+	CONSTRAINT fk_paletRafID FOREIGN KEY(Raf_ID) REFERENCES Raf(ID)
+)
+SELECT * FROM Palet
+GO
+CREATE TABLE Urun
+(
+	ID int IDENTITY (1,1),
+	Isim NVARCHAR(100) NOT NULL,
+	EklemeTarihi DATE NOT NULL,
+	Depo_ID int,
+	Raf_ID int,	
+	Palet_ID int,	
+	Uye_ID int,
+	CONSTRAINT pk_Urun PRIMARY KEY(ID),
+	CONSTRAINT fk_urunDepoID FOREIGN KEY(Depo_ID) REFERENCES Depo(ID),
+	CONSTRAINT fk_urunRafID FOREIGN KEY(Raf_ID) REFERENCES Raf(ID),
+	CONSTRAINT fk_urunPaletID FOREIGN KEY(Palet_ID) REFERENCES Palet(ID),
+	CONSTRAINT fk_urunUyeID FOREIGN KEY(Uye_ID) REFERENCES Uye(ID)
+)
